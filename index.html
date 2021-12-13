@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>AI Thinkers</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    </head>
 <body onload="myFunction()" style="padding: 0px;margin: 0">
 
 <script>
@@ -25,15 +29,29 @@ function myFunction() {
    menuTag.style.position = "relative";
    menuTag.style.marginLeft="auto";
    menuTag.style.paddingRight="5%";
+
+   var menubutton = document.createElement("button");	
+   menubutton.classList = "fa fa-bars menubutton";
+   menubutton.type = "button";
+   menubutton.style.position = "relative";
+   menubutton.style.marginLeft="auto";
+   menubutton.style.padding="10px";
+   menubutton.style.fontSize = "35px";
+   menubutton.style.display = "none";
+   menubutton.style.background = "black";
+   menubutton.style.color = "white";
+   menubutton.style.marginRight = "5%";
         
    headerDiv.appendChild(headerTag);
    headerDiv.appendChild(menuTag);
+   headerDiv.appendChild(menubutton)
+
    //========== for menu==========
 
    
     var menutab = [{'name':"Home",'value':"#home"},
     {'name':"About",'value':"#aboutus"},
-    {'name':"Contact",'value':"#contact"},
+    {'name':"Contact",'value':"#contactus"},
     {'name':"Portfolio",'value':"#portfolio"}];
 
     menutab.forEach(index => {
@@ -160,6 +178,7 @@ thirdfirstheading.style.textAlign = "center";
    document.body.appendChild(thirdDiv);
    
    var footerDiv = document.createElement("DIV");
+   firstDiv.id = "contactus";
    footerDiv.style.height = "auto";
    footerDiv.style.width = "100%";
    footerDiv.style.backgroundColor = "#212121";
@@ -194,7 +213,27 @@ thirdfirstheading.style.textAlign = "center";
    
    document.body.appendChild(footerDiv);
     
+   var devicewidth = screen.width;
+   console.log(devicewidth);
+   if(devicewidth<=400)
+   {
+     menuTag.style.display = "none";
+     menubutton.style.display = "block";
+   }
+
+   document.getElementsByClassName("menubutton").onclick = function() {myFunction()};
+
+    function myFunction()
+    {
+        console.log('hiiiiiii');
+        menuTag.style.display = "block";
+        menuTag.style.display = "inline";
+        menu.style.fontSize = "25px";
+        menu.style.paddingLeft ="10px";
+        menu.style.paddingTOp ="10px";
+    }
 }
+
 </script>
 
 </body>
