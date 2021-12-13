@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<body onload="myFunction()" style="padding: 0px;margin: 0">
+
+<script>
+function myFunction() {
+  
+  var headerDiv = document.createElement("DIV");
+   headerDiv.style.width = "100%";
+   headerDiv.style.backgroundColor = "white";
+   //headerDiv.style.textAlign = "center";
+   headerDiv.style.padding = "20px 0";
+   headerDiv.style.position = "relative";
+   headerDiv.style.display = "flex";
+   
+   //======= for logo==============
+   var headerTag = document.createElement("img");	
+   headerTag.src = "https://aithinkers.com/assets/img/ai-small-2.webp";
+   headerTag.style.width = "150px";
+   headerTag.style.height = "auto";
+   headerTag.style.position = "relative";
+   headerTag.style.paddingLeft="5%";
+
+   var menuTag = document.createElement("DIV");	
+   menuTag.style.position = "relative";
+   menuTag.style.marginLeft="auto";
+   menuTag.style.paddingRight="5%";
+        
+   headerDiv.appendChild(headerTag);
+   headerDiv.appendChild(menuTag);
+   //========== for menu==========
+
+   
+    var menutab = [{'name':"Home",'value':"#home"},
+    {'name':"About",'value':"#aboutus"},
+    {'name':"Contact",'value':"#contact"},
+    {'name':"Portfolio",'value':"#portfolio"}];
+
+    menutab.forEach(index => {
+        var menu = document.createElement("a");
+        menu.innerHTML = index.name;
+        menu.href = index.value;
+        menu.style.color = "black"
+        menu.style.fontSize = "20px";
+        menu.style.paddingLeft ="30px";
+        menu.style.textDecoration = "none";
+        menuTag.appendChild(menu);
+    });
+
+   document.body.appendChild(headerDiv);
+  	
+    
+    
+  // creating first section
+   var firstDiv = document.createElement("DIV");
+   firstDiv.style.backgroundImage = "url('img/4.jpg')";
+   firstDiv.style.backgroundRepeat = "no-repeat";
+   firstDiv.style.backgroundPosition = "center";
+   firstDiv.style.opacity = '0.9';
+   firstDiv.style.height = "450px";
+   firstDiv.style.width = "100%";
+   firstDiv.style.backgroundColor = "#607D8B";
+   firstDiv.style.display = "flex";
+   firstDiv.style.justifyContent = "center";
+   firstDiv.style.alignItems = "center";
+   
+   var centerTag = document.createElement("DIV");	
+   
+   centerTag.style.height = "200px";
+   centerTag.style.width = "500px";
+   centerTag.style.border = "1px solid white";
+   centerTag.style.color = "white";
+   centerTag.innerHTML = "We are a bunch of high performing technology teams with a vision of building World Class Products. We consistently keep track of emerging technologies to deliver advanced software products & solutions. We invest technology into potential ideas which can disrupt the marketplace. We research, design and develop inhouse software products. Always looking out for developing Unikorn Startups.";
+   centerTag.style.display = "flex";
+   centerTag.style.justifyContent = "center";
+   centerTag.style.alignItems = "center";
+   centerTag.style.textAlign = "justify";
+   centerTag.style.padding = "0 20px";
+
+   
+   firstDiv.appendChild(centerTag);
+   
+   document.body.appendChild(firstDiv);
+  
+     // second section
+
+   var secondDiv = document.createElement("DIV");
+   secondDiv.id = "aboutus";
+   secondDiv.style.width = "100%";
+   secondDiv.style.backgroundColor = "#BDBDBD";
+   secondDiv.style.margin = '0px';
+   secondDiv.style.padding = '40px 0';
+
+   var headignTag = document.createElement("h2");
+   headignTag.innerHTML = "About Us";
+   headignTag.style.margin = "0px";
+   headignTag.style.textAlign = "center";
+   secondDiv.appendChild(headignTag);
+
+   var hTag = document.createElement("p");
+   
+    hTag.style.fontSize = "20px";
+    hTag.style.color = "white";
+    hTag.style.padding = "40px 100px";
+    hTag.style.margin = "0px";
+    hTag.style.textAlign = "justify";
+    hTag.innerHTML = "This is some text and some text are some text what we can do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this. This is some text and some text are some text what we can 			do about this"
+   
+   secondDiv.appendChild(hTag);
+   
+   document.body.appendChild(secondDiv);
+
+  // third section
+  
+   var thirdDiv = document.createElement("DIV");
+   thirdDiv.id = "portfolio";
+   thirdDiv.style.height = "auto";
+   thirdDiv.style.width = "100%";
+   thirdDiv.style.backgroundColor = "#eac88b";
+   thirdDiv.style.justifyContent = "space-between";
+   thirdDiv.textAlign = "center";
+   thirdDiv.style.padding = "20px 0";
+   //thirdDiv.style.paddingRight = "10px";
+
+   //===== Portfolio heading ========
+   var thirdfirstheading = document.createElement("h1");
+   thirdfirstheading.innerHTML = "Portfolio";
+   thirdfirstheading.style.margin = "0px";
+   thirdfirstheading.style.padding = "1.5em 0 10px";
+   thirdfirstheading.style.borderBottom = "1px solid gray";
+thirdfirstheading.style.textAlign = "center";
+   thirdDiv.appendChild(thirdfirstheading);
+
+   //===============
+   var thirdfirstDiv = document.createElement("DIV");
+   thirdfirstDiv.style.display = "flex";
+   thirdfirstDiv.style.padding = "40px 80px";
+   thirdfirstDiv.style.justifyContent = "center";
+
+   thirdDiv.appendChild(thirdfirstDiv);
+    //======= portfolio
+   var portfolio = [{'src':"https://aithinkers.com/assets/img/image5.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image3.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image4.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image2.jpg"}];
+
+    
+    portfolio.forEach(index => {
+        var centerDiv = document.createElement("img");	
+        centerDiv.src = index.src;
+        centerDiv.style.width = "22%";
+        centerDiv.style.padding = "2px";
+        centerDiv.style.margin = "8px";
+        centerDiv.style.border = "1px solid white";
+        centerDiv.style.boxShadow = "2px 4px 8px black";
+        thirdfirstDiv.appendChild(centerDiv);
+    });
+
+   
+   document.body.appendChild(thirdDiv);
+   
+   var footerDiv = document.createElement("DIV");
+   footerDiv.style.height = "auto";
+   footerDiv.style.width = "100%";
+   footerDiv.style.backgroundColor = "#212121";
+   footerDiv.style.display = "flex";
+   footerDiv.style.justifyContent = "center";
+   footerDiv.style.alignItems = "center";
+   
+   var divContainer = document.createElement("div");
+   divContainer.style.width= "100%";
+   divContainer.style.display = "flex";
+   divContainer.style.justifyContent = "space-between";
+   divContainer.style.alignItems = "center";
+   divContainer.style.paddingLeft = "100px";
+   divContainer.style.paddingRight = "100px";
+   divContainer.style.color = "white";
+
+   var footerFirstDiv = document.createElement("div");
+   footerFirstDiv.innerHTML = "© Copyright Portfolio. All Rights Reserved";
+   footerFirstDiv.style.width = "60%";
+   footerFirstDiv.style.height = "auto";
+   footerFirstDiv.style.padding = "20px 0";
+   
+   var footerSecondDiv = document.createElement("div");
+   footerSecondDiv.innerHTML = "Contact us 7078049692, Mail id - rajputumesh117@gmail.com";
+   footerSecondDiv.style.width = "40%";
+   footerSecondDiv.style.height = "auto";
+   
+   divContainer.appendChild(footerFirstDiv);
+   divContainer.appendChild(footerSecondDiv);
+   
+   footerDiv.appendChild(divContainer);  
+   
+   document.body.appendChild(footerDiv);
+    
+}
+</script>
+
+</body>
+</html>
