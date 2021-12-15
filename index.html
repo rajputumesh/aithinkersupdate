@@ -124,7 +124,7 @@ function myFunction() {
     hTag.style.color = "white";
     hTag.style.padding = "40px 100px";
     hTag.style.margin = "0px";
-    hTag.style.textAlign = "justify";
+    //hTag.style.textAlign = "justify";
     hTag.innerHTML = "We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. <br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.<br>Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br>With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism."
    
    secondDiv.appendChild(hTag);
@@ -155,6 +155,7 @@ thirdfirstheading.style.textAlign = "center";
    //===============
    var thirdfirstDiv = document.createElement("DIV");
    thirdfirstDiv.style.display = "flex";
+   thirdfirstDiv.style.flexWrap = "wrap";
    thirdfirstDiv.style.padding = "40px 80px";
    thirdfirstDiv.style.justifyContent = "center";
 
@@ -163,15 +164,22 @@ thirdfirstheading.style.textAlign = "center";
    var portfolio = [{'src':"https://aithinkers.com/assets/img/image5.jpg"},
     {'src':"https://aithinkers.com/assets/img/image3.jpg"},
     {'src':"https://aithinkers.com/assets/img/image4.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image2.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image4.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image5.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image3.jpg"},
+    {'src':"https://aithinkers.com/assets/img/image4.jpg"},
     {'src':"https://aithinkers.com/assets/img/image2.jpg"}];
 
     
     portfolio.forEach(index => {
         var centerDiv = document.createElement("img");	
+        centerDiv.classList = 'responsive';
         centerDiv.src = index.src;
-        centerDiv.style.width = "22%";
+        centerDiv.style.width = "25%";
         centerDiv.style.padding = "2px";
         centerDiv.style.margin = "8px";
+        centerDiv.style.display = "block";
         centerDiv.style.border = "1px solid white";
         centerDiv.style.boxShadow = "2px 4px 8px black";
         thirdfirstDiv.appendChild(centerDiv);
@@ -200,13 +208,13 @@ thirdfirstheading.style.textAlign = "center";
 
    var footerFirstDiv = document.createElement("div");
    footerFirstDiv.innerHTML = "© Copyright Portfolio. All Rights Reserved";
-   footerFirstDiv.style.width = "60%";
+   footerFirstDiv.style.width = "50%";
    footerFirstDiv.style.height = "auto";
    footerFirstDiv.style.padding = "20px 0";
    
    var footerSecondDiv = document.createElement("div");
    footerSecondDiv.innerHTML = "Contact Us - &nbsp;&nbsp;<i class='fa fa-phone'></i> 91+7078049692 , &nbsp;&nbsp;<i class='fa fa-envelope-o'></i> rajputumesh117@gmail.com";
-   footerSecondDiv.style.width = "40%";
+   footerSecondDiv.style.width = "50%";
    footerSecondDiv.style.height = "auto";
    
    divContainer.appendChild(footerFirstDiv);
@@ -215,7 +223,12 @@ thirdfirstheading.style.textAlign = "center";
    footerDiv.appendChild(divContainer);  
    
    document.body.appendChild(footerDiv);
-    
+   
+   if(screen.width<=500)
+   {
+        var centerDiv = document.getElementsByClassName('responsive');
+        centerDiv.style.display = "none";
+   }
    
 }
 
