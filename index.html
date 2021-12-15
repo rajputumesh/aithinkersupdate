@@ -86,18 +86,19 @@ function myFunction() {
    
    var centerTag = document.createElement("p");	
    
-   centerTag.style.height = "200px";
+   centerTag.classList = "fontSize";
    centerTag.style.width = "50%";
    centerTag.style.border = "1px solid white";
    centerTag.style.color = "white";
    centerTag.style.lineHeight = "1.4em";
+   centerTag.style.fontSize = "18px";
    centerTag.innerHTML = "AI THINKERS :- <br><br>We are a bunch of high performing technology teams with a vision of building World Class Products. We consistently keep track of emerging technologies to deliver advanced software products & solutions. We invest technology into potential ideas which can disrupt the marketplace. We research, design and develop inhouse software products. Always looking out for developing Unikorn Startups.";
    centerTag.style.fontFamily = "Montserrat";
    centerTag.style.display = "flex";
    centerTag.style.justifyContent = "center";
    centerTag.style.alignItems = "center";
    centerTag.style.textAlign = "justify";
-   centerTag.style.padding = "0 20px";
+   centerTag.style.padding = "15px 20px";
 
    
    firstDiv.appendChild(centerTag);
@@ -128,7 +129,7 @@ function myFunction() {
     hTag.style.margin = "0px";
     //hTag.style.textAlign = "justify";
     hTag.innerHTML = "We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. <br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.<br>Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br>With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism."
-   
+    hTag.classList = "fontSize";
    aboutUs.appendChild(hTag);
    
    document.body.appendChild(aboutUs);
@@ -239,15 +240,27 @@ function myFunction() {
             centerDiv[i].style.width = "45%";
             centerDiv[i].style.margin = "12px";
         }
+    var fontSize = document.getElementsByClassName('fontSize');
+        for(var i=0;i<=fontSize.length;i++)
+        {
+            fontSize[i].style.fontSize = "23px";
+            fontSize[i].style.lineHeight = "1.9em";
+        }
    }
 
-   if(screen.width < 900 && screen.width > 500)
+   if(screen.width < 1000 && screen.width > 500)
    {
     var centerDiv = document.getElementsByClassName('responsive');
         for(var i=0;i<=centerDiv.length;i++)
         {
             centerDiv[i].style.width = "30%";
             centerDiv[i].style.margin = "10px";
+        }
+    var fontSize = document.getElementsByClassName('fontSize');
+        for(var i=0;i<=fontSize.length;i++)
+        {
+            fontSize[i].style.fontSize = "20px";
+            fontSize[i].style.lineHeight = "1.6em";
         }
    }
    
