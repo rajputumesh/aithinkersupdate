@@ -90,6 +90,7 @@ function myFunction() {
    centerTag.style.width = "50%";
    centerTag.style.border = "1px solid white";
    centerTag.style.color = "white";
+   centerTag.style.lineHeight = "1.4em";
    centerTag.innerHTML = "AI THINKERS :- <br><br>We are a bunch of high performing technology teams with a vision of building World Class Products. We consistently keep track of emerging technologies to deliver advanced software products & solutions. We invest technology into potential ideas which can disrupt the marketplace. We research, design and develop inhouse software products. Always looking out for developing Unikorn Startups.";
    centerTag.style.fontFamily = "Montserrat";
    centerTag.style.display = "flex";
@@ -120,7 +121,8 @@ function myFunction() {
 
    var hTag = document.createElement("p");
    
-    hTag.style.fontSize = "20px";
+    hTag.style.fontSize = "18px";
+    hTag.style.lineHeight = "1.4em";
     hTag.style.color = "white";
     hTag.style.padding = "40px 100px";
     hTag.style.margin = "0px";
@@ -176,12 +178,12 @@ function myFunction() {
         var centerDiv = document.createElement("img");	
         centerDiv.classList = 'responsive';
         centerDiv.src = index.src;
-        centerDiv.style.width = "25%";
+        centerDiv.style.width = "22%";
         centerDiv.style.padding = "2px";
         centerDiv.style.margin = "8px";
         centerDiv.style.display = "block";
         centerDiv.style.border = "1px solid white";
-        centerDiv.style.boxShadow = "2px 4px 8px black";
+        centerDiv.style.boxShadow = "black 4px 6px 6px";
         thirdfirstDiv.appendChild(centerDiv);
     });
 
@@ -231,8 +233,22 @@ function myFunction() {
    
    if(screen.width<=500)
    {
-        var centerDiv = document.getElementsByClassName('responsive');
-        centerDiv.style.display = "none";
+    var centerDiv = document.getElementsByClassName('responsive');
+        for(var i=0;i<=centerDiv.length;i++)
+        {
+            centerDiv[i].style.width = "45%";
+            centerDiv[i].style.margin = "12px";
+        }
+   }
+
+   if(screen.width < 900 && screen.width > 500)
+   {
+    var centerDiv = document.getElementsByClassName('responsive');
+        for(var i=0;i<=centerDiv.length;i++)
+        {
+            centerDiv[i].style.width = "30%";
+            centerDiv[i].style.margin = "10px";
+        }
    }
    
 }
