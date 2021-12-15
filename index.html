@@ -73,11 +73,12 @@ function myFunction() {
     
   // creating first section
    var firstDiv = document.createElement("DIV");
+   firstDiv.id = "bgslider";
    firstDiv.style.backgroundImage = "url('img/4.jpg')";
    firstDiv.style.backgroundRepeat = "no-repeat";
    firstDiv.style.backgroundPosition = "center";
-   firstDiv.style.opacity = '0.9';
-   firstDiv.style.height = "450px";
+   firstDiv.style.opacity = '0.7';
+   firstDiv.style.height = "500px";
    firstDiv.style.width = "100%";
    firstDiv.style.backgroundColor = "#607D8B";
    firstDiv.style.display = "flex";
@@ -90,6 +91,7 @@ function myFunction() {
    centerTag.style.width = "50%";
    centerTag.style.border = "1px solid white";
    centerTag.style.color = "white";
+   centerTag.style.backgroundColor = "#000000ad";
    centerTag.style.lineHeight = "1.4em";
    centerTag.style.fontSize = "18px";
    centerTag.innerHTML = "AI THINKERS :- <br><br>We are a bunch of high performing technology teams with a vision of building World Class Products. We consistently keep track of emerging technologies to deliver advanced software products & solutions. We invest technology into potential ideas which can disrupt the marketplace. We research, design and develop inhouse software products. Always looking out for developing Unikorn Startups.";
@@ -140,13 +142,26 @@ function myFunction() {
         hTag.style.fontSize = "18px";
         hTag.style.lineHeight = "1.4em";
         hTag.style.color = "white";
-        hTag.style.padding = "60px 100px 40px 20px";
+        hTag.style.padding = "50px 100px 40px 20px";
         hTag.style.margin = "0px";
         hTag.style.textAlign = "justify";
-        hTag.innerHTML = "<b>AI THINKERS <br><br></b>We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. <br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.<br>Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br>With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism."
+        hTag.innerHTML = "<b>AI THINKERS <br><br></b> We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. </br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.";
         hTag.classList = "fontSize";
+
+        var pTagsecond = document.createElement("p");
+        pTagsecond.style.width = "100%";
+        pTagsecond.style.fontSize = "18px";
+        pTagsecond.style.lineHeight = "1.4em";
+        pTagsecond.style.color = "white";
+        pTagsecond.style.padding = "20px 100px 40px 0px";
+        pTagsecond.style.margin = "0px";
+        pTagsecond.style.textAlign = "justify";
+        pTagsecond.innerHTML = "Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br> With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism.";
+        pTagsecond.classList = "fontSize";
+        
         aboutsecondUs.appendChild(hTag);
-   aboutUs.appendChild(aboutsecondUs);
+        aboutUs.appendChild(aboutsecondUs);
+
    document.body.appendChild(aboutUs);
 
   // third section
@@ -268,9 +283,7 @@ function myFunction() {
             fontSize[i].style.fontSize = "23px";
             fontSize[i].style.lineHeight = "1.9em";
         }
-   }
-
-   if(screen.width < 1000 && screen.width > 500)
+   }else if(screen.width < 1000 && screen.width > 500)
    {
     var centerDiv = document.getElementsByClassName('responsive');
         for(var i=0;i<=centerDiv.length;i++)
@@ -284,7 +297,23 @@ function myFunction() {
             fontSize[i].style.fontSize = "20px";
             fontSize[i].style.lineHeight = "1.6em";
         }
+   }else {
+        hTag.appendChild(pTagsecond);
+        //aboutsecondUs.appendChild(pTagsecond);
    }
+
+    var array = ['https://aithinkers.com/assets/img/slide/At-AiThinkers.jpg','https://aithinkers.com/assets/img/slide/alige.jpg', 'https://aithinkers.com/assets/img/slide/start-up.jpg','https://aithinkers.com/assets/img/slide/INTELLIGENT.jpg'];
+    var i=0;
+    sliderbackground();
+    function sliderbackground() {
+        document.getElementById('bgslider').style.backgroundImage = "url("+array[i]+")";
+        setTimeout(function() {sliderbackground()}, 3000);
+        i++;
+        if(array.length==i)
+        {
+            i=0;
+        }
+    }
    
 }
 
