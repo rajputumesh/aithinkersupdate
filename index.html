@@ -120,18 +120,33 @@ function myFunction() {
    headignTag.style.textAlign = "center";
    aboutUs.appendChild(headignTag);
 
-   var hTag = document.createElement("p");
-   
-    hTag.style.fontSize = "18px";
-    hTag.style.lineHeight = "1.4em";
-    hTag.style.color = "white";
-    hTag.style.padding = "40px 100px";
-    hTag.style.margin = "0px";
-    //hTag.style.textAlign = "justify";
-    hTag.innerHTML = "We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. <br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.<br>Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br>With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism."
-    hTag.classList = "fontSize";
-   aboutUs.appendChild(hTag);
-   
+    var aboutsecondUs = document.createElement("DIV");
+    aboutsecondUs.style.width = "100%";
+    aboutsecondUs.style.margin = '0px';
+    aboutsecondUs.style.padding = '10px 0';
+    aboutsecondUs.style.display = "flex";
+        
+        var aboutImg = document.createElement("img");
+        aboutImg.id = "aboutimg";
+        aboutImg.src="https://aithinkers.com/assets/img/image2.jpg";
+        aboutImg.style.width = "30%";
+        aboutImg.style.height = "30%";
+        aboutImg.style.padding = "40px 20px 40px 100px";
+        aboutsecondUs.appendChild(aboutImg);
+
+        var hTag = document.createElement("p");
+        hTag.id = 'abputP';
+        hTag.style.width = "70%";
+        hTag.style.fontSize = "18px";
+        hTag.style.lineHeight = "1.4em";
+        hTag.style.color = "white";
+        hTag.style.padding = "60px 100px 40px 20px";
+        hTag.style.margin = "0px";
+        hTag.style.textAlign = "justify";
+        hTag.innerHTML = "<b>AI THINKERS <br><br></b>We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. <br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.<br>Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br>With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism."
+        hTag.classList = "fontSize";
+        aboutsecondUs.appendChild(hTag);
+   aboutUs.appendChild(aboutsecondUs);
    document.body.appendChild(aboutUs);
 
   // third section
@@ -208,6 +223,7 @@ function myFunction() {
    var divContainer = document.createElement("div");
    divContainer.style.width= "100%";
    divContainer.style.display = "flex";
+   divContainer.style.flexWrap = "wrap";
    divContainer.style.justifyContent = "space-between";
    divContainer.style.alignItems = "center";
    divContainer.style.paddingLeft = "100px";
@@ -234,6 +250,12 @@ function myFunction() {
    
    if(screen.width<=500)
    {
+        aboutImg.style.width = '80%';
+
+        abputP.style.width = '80%';
+        abputP.style.padding = '100px';
+
+        aboutsecondUs.style.display = "block";
     var centerDiv = document.getElementsByClassName('responsive');
         for(var i=0;i<=centerDiv.length;i++)
         {
