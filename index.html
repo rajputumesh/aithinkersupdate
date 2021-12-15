@@ -105,18 +105,18 @@ function myFunction() {
   
      // second section
 
-   var secondDiv = document.createElement("DIV");
-   secondDiv.id = "aboutus";
-   secondDiv.style.width = "100%";
-   secondDiv.style.backgroundColor = "#616161";
-   secondDiv.style.margin = '0px';
-   secondDiv.style.padding = '40px 0';
+   var aboutUs = document.createElement("DIV");
+   aboutUs.id = "aboutus";
+   aboutUs.style.width = "100%";
+   aboutUs.style.backgroundColor = "#616161";
+   aboutUs.style.margin = '0px';
+   aboutUs.style.padding = '40px 0';
 
    var headignTag = document.createElement("h2");
    headignTag.innerHTML = "About Us";
    headignTag.style.margin = "0px";
    headignTag.style.textAlign = "center";
-   secondDiv.appendChild(headignTag);
+   aboutUs.appendChild(headignTag);
 
    var hTag = document.createElement("p");
    
@@ -127,21 +127,21 @@ function myFunction() {
     //hTag.style.textAlign = "justify";
     hTag.innerHTML = "We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. <br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.<br>Expertise in architecting and developing cloud-native applications that support web, mobile and IoT. We are experienced in containerization/orchestration of the applications and also developing applications using serverless(lambdas, functions) capabilities provided by cloud providers.<br>With our expertise in Robotic Process Automation(RPA) tools, we can help companies automate repetitive tasks using computer vision technologies. We are experienced in UIPath, Automation Anywhere, and Blue Prism."
    
-   secondDiv.appendChild(hTag);
+   aboutUs.appendChild(hTag);
    
-   document.body.appendChild(secondDiv);
+   document.body.appendChild(aboutUs);
 
   // third section
   
-   var thirdDiv = document.createElement("DIV");
-   thirdDiv.id = "portfolio";
-   thirdDiv.style.height = "auto";
-   thirdDiv.style.width = "100%";
-   thirdDiv.style.backgroundColor = "#fff4f4";
-   thirdDiv.style.justifyContent = "space-between";
-   thirdDiv.textAlign = "center";
-   thirdDiv.style.padding = "20px 0";
-   //thirdDiv.style.paddingRight = "10px";
+   var portfolioDiv = document.createElement("DIV");
+   portfolioDiv.id = "portfolio";
+   portfolioDiv.style.height = "auto";
+   portfolioDiv.style.width = "100%";
+   portfolioDiv.style.backgroundColor = "#fff4f4";
+   portfolioDiv.style.justifyContent = "space-between";
+   portfolioDiv.textAlign = "center";
+   portfolioDiv.style.padding = "20px 0";
+   //portfolioDiv.style.paddingRight = "10px";
 
    //===== Portfolio heading ========
    var thirdfirstheading = document.createElement("h1");
@@ -149,8 +149,8 @@ function myFunction() {
    thirdfirstheading.style.margin = "0px";
    thirdfirstheading.style.padding = "1.5em 0 10px";
    thirdfirstheading.style.borderBottom = "1px solid gray";
-thirdfirstheading.style.textAlign = "center";
-   thirdDiv.appendChild(thirdfirstheading);
+   thirdfirstheading.style.textAlign = "center";
+   portfolioDiv.appendChild(thirdfirstheading);
 
    //===============
    var thirdfirstDiv = document.createElement("DIV");
@@ -159,7 +159,7 @@ thirdfirstheading.style.textAlign = "center";
    thirdfirstDiv.style.padding = "40px 80px";
    thirdfirstDiv.style.justifyContent = "center";
 
-   thirdDiv.appendChild(thirdfirstDiv);
+   portfolioDiv.appendChild(thirdfirstDiv);
     //======= portfolio
    var portfolio = [{'src':"https://aithinkers.com/assets/img/image5.jpg"},
     {'src':"https://aithinkers.com/assets/img/image3.jpg"},
@@ -185,8 +185,13 @@ thirdfirstheading.style.textAlign = "center";
         thirdfirstDiv.appendChild(centerDiv);
     });
 
+   document.body.appendChild(portfolioDiv);
    
-   document.body.appendChild(thirdDiv);
+   var ifreamDiv = document.createElement("iframe");
+   ifreamDiv.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113579.78745693566!2d77.90997248568897!3d27.176157105939453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1639540446882!5m2!1sen!2sin";
+   ifreamDiv.style.height = "500px";
+   ifreamDiv.style.width = "100%";
+   document.body.appendChild(ifreamDiv);
    
    var footerDiv = document.createElement("DIV");
    footerDiv.id = "contactus";
