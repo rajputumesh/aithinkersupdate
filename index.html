@@ -57,6 +57,11 @@ function myFunction() {
     {'name':"Contact US",'value':"#contactus"}];
 
     menutab.forEach(index => {
+        manu(index);
+    });
+
+    function manu(index)
+    {
         var menu = document.createElement("a");
         menu.innerHTML = index.name;
         menu.href = index.value;
@@ -65,7 +70,7 @@ function myFunction() {
         menu.style.paddingLeft ="30px";
         menu.style.textDecoration = "none";
         menuTag.appendChild(menu);
-    });
+    }
 
    document.body.appendChild(headerDiv);
   	
@@ -206,6 +211,11 @@ function myFunction() {
 
     
     portfolio.forEach(index => {
+        portfoliofun(index)
+    });
+
+    function portfoliofun(index)
+    {
         var centerDiv = document.createElement("img");	
         centerDiv.classList = 'responsive';
         centerDiv.src = index.src;
@@ -216,7 +226,7 @@ function myFunction() {
         centerDiv.style.border = "1px solid white";
         centerDiv.style.boxShadow = "black 4px 6px 6px";
         thirdfirstDiv.appendChild(centerDiv);
-    });
+    }
 
    document.body.appendChild(portfolioDiv);
    
@@ -275,8 +285,12 @@ function myFunction() {
         
         aboutsecondUs.style.display = "block";
         ifreamDiv.style.height = "800px";
-    var centerDiv = document.getElementsByClassName('responsive');
+        var centerDiv = document.getElementsByClassName('responsive');
         for(var i=0;i<=centerDiv.length;i++)
+        {
+            centerDivfun(i);
+        }
+        function centerDivfun(i)
         {
             centerDiv[i].style.width = "45%";
             centerDiv[i].style.margin = "12px";
@@ -284,19 +298,31 @@ function myFunction() {
     var fontSize = document.getElementsByClassName('fontSize');
         for(var i=0;i<=fontSize.length;i++)
         {
+            fontSizefun(i);
+        }
+        function fontSizefun(i)
+        {
             fontSize[i].style.fontSize = "23px";
             fontSize[i].style.lineHeight = "1.9em";
         }
    }else if(screen.width < 1000 && screen.width > 500)
    {
-    var centerDiv = document.getElementsByClassName('responsive');
+        var centerDiv = document.getElementsByClassName('responsive');
         for(var i=0;i<=centerDiv.length;i++)
+        {
+            centerDivfun(i);
+        }
+        function centerDivfun(i)
         {
             centerDiv[i].style.width = "30%";
             centerDiv[i].style.margin = "10px";
         }
     var fontSize = document.getElementsByClassName('fontSize');
         for(var i=0;i<=fontSize.length;i++)
+        {
+            fontSizefun(i);
+        }
+        function fontSizefun(i)
         {
             fontSize[i].style.fontSize = "20px";
             fontSize[i].style.lineHeight = "1.6em";
