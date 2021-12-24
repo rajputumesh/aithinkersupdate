@@ -1,13 +1,17 @@
-function resonsive()
+function responsive()
 {
     if(screen.width<=500)
    {
+        var aboutImg = document.getElementById('aboutimg');
         aboutImg.style.width = '80%';
         abputP.style.width = '80%';
         abputP.style.padding = '100px';
         
+        var aboutsecondUs = document.getElementById('aboutsection');
         aboutsecondUs.style.display = "block";
-        ifreamDiv.style.height = "800px";
+
+        var ifreamDiv = document.getElementsByTagName('iframe');
+        ifreamDiv.height = "800px";
         var centerDiv = document.getElementsByClassName('responsive');
         for(var i=0;i<=centerDiv.length;i++)
         {
@@ -30,15 +34,15 @@ function resonsive()
         }
    }else if(screen.width < 1000 && screen.width > 500)
    {
-        var centerDiv = document.getElementsByClassName('responsive');
-        for(var i=0;i<=centerDiv.length;i++)
+        var responsiveimg = document.getElementsByClassName('responsive');
+        for(var i=0;i<=responsiveimg.length;i++)
         {
-            centerDivfun(i);
+            responsiveimgfun(i);
         }
-        function centerDivfun(i)
+        function responsiveimgfun(i)
         {
-            centerDiv[i].style.width = "30%";
-            centerDiv[i].style.margin = "10px";
+            responsiveimg[i].style.width = "30%";
+            responsiveimg[i].style.margin = "10px";
         }
     var fontSize = document.getElementsByClassName('fontSize');
         for(var i=0;i<=fontSize.length;i++)
@@ -51,6 +55,7 @@ function resonsive()
             fontSize[i].style.lineHeight = "1.6em";
         }
    }else {
+        var hTag = document.getElementsById('abputP');
         hTag.appendChild(pTagsecond);
         //aboutsecondUs.appendChild(pTagsecond);
    }   
