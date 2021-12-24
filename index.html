@@ -5,112 +5,21 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://aithinkers.com/assets/img/favicon.png" rel="icon">
         <link href="https://aithinkers.com/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+        <script src="slider.js"></script>
+        <script src="resonsive.js"></script>
+        <script src="gallery.js"></script>
     </head>
 <body onload="myFunction()" style="padding: 0px;margin: 0;font-family:Montserrat">
 
 <script>
 function myFunction() {
   
-  var headerDiv = document.createElement("DIV");
-   headerDiv.style.width = "100%";
-   headerDiv.style.backgroundColor = "white";
-   //headerDiv.style.textAlign = "center";
-   headerDiv.style.padding = "20px 0";
-   headerDiv.style.position = "relative";
-   headerDiv.style.display = "flex";
-   
-   //======= for logo==============
-   var headerTag = document.createElement("img");	
-   headerTag.src = "https://aithinkers.com/assets/img/ai-small-2.webp";
-   headerTag.style.width = "150px";
-   headerTag.style.height = "auto";
-   headerTag.style.position = "relative";
-   headerTag.style.paddingLeft="5%";
-
-   var menuTag = document.createElement("DIV");	
-   menuTag.style.position = "relative";
-   menuTag.style.marginLeft="auto";
-   menuTag.style.paddingRight="5%";
-
-   var menubutton = document.createElement("button");	
-   menubutton.classList = "fa fa-bars menubutton";
-   menubutton.type = "button";
-   menubutton.style.position = "relative";
-   menubutton.style.marginLeft="auto";
-   menubutton.style.padding="10px";
-   menubutton.style.fontSize = "35px";
-   menubutton.style.display = "none";
-   menubutton.style.background = "black";
-   menubutton.style.color = "white";
-   menubutton.style.marginRight = "5%";
-        
-   headerDiv.appendChild(headerTag);
-   headerDiv.appendChild(menuTag);
-   headerDiv.appendChild(menubutton)
-
-   //========== for menu==========
-
-   
-    var menutab = [{'name':"Home",'value':"#home"},
-    {'name':"About Us",'value':"#aboutus"},
-    {'name':"Portfolio",'value':"#portfolio"},
-    {'name':"Contact US",'value':"#contactus"}];
-
-    menutab.forEach(index => {
-        manu(index);
-    });
-
-    function manu(index)
-    {
-        var menu = document.createElement("a");
-        menu.innerHTML = index.name;
-        menu.href = index.value;
-        menu.style.color = "black"
-        menu.style.fontSize = "20px";
-        menu.style.paddingLeft ="30px";
-        menu.style.textDecoration = "none";
-        menuTag.appendChild(menu);
-    }
-
-   document.body.appendChild(headerDiv);
-  	
-    
-    
-  // creating first section
-   var firstDiv = document.createElement("DIV");
-   firstDiv.id = "bgslider";
-   firstDiv.style.backgroundImage = "url('img/4.jpg')";
-   firstDiv.style.backgroundRepeat = "no-repeat";
-   firstDiv.style.backgroundPosition = "center";
-   firstDiv.style.opacity = '0.7';
-   firstDiv.style.height = "500px";
-   firstDiv.style.width = "100%";
-   firstDiv.style.backgroundColor = "#607D8B";
-   firstDiv.style.display = "flex";
-   firstDiv.style.justifyContent = "center";
-   firstDiv.style.alignItems = "center";
-   
-   var centerTag = document.createElement("p");	
-   
-   centerTag.classList = "fontSize";
-   centerTag.style.width = "50%";
-   centerTag.style.border = "1px solid white";
-   centerTag.style.color = "white";
-   centerTag.style.backgroundColor = "#000000ad";
-   centerTag.style.lineHeight = "1.4em";
-   centerTag.style.fontSize = "18px";
-   centerTag.innerHTML = "AI THINKERS :- <br><br>We are a bunch of high performing technology teams with a vision of building World Class Products. We consistently keep track of emerging technologies to deliver advanced software products & solutions. We invest technology into potential ideas which can disrupt the marketplace. We research, design and develop inhouse software products. Always looking out for developing Unikorn Startups.";
-   centerTag.style.fontFamily = "Montserrat";
-   centerTag.style.display = "flex";
-   centerTag.style.justifyContent = "center";
-   centerTag.style.alignItems = "center";
-   centerTag.style.textAlign = "justify";
-   centerTag.style.padding = "15px 20px";
-
-   
-   firstDiv.appendChild(centerTag);
-   
-   document.body.appendChild(firstDiv);
+    header();
+    var array = ['img/At-AiThinkers.jpg','img/alige.jpg', 'img/start-up.jpg','img/INTELLIGENT.jpg'];
+    var data = "AI THINKERS :- <br><br>We are a bunch of high performing technology teams with a vision of building World Class Products. We consistently keep track of emerging technologies to deliver advanced software products & solutions. We invest technology into potential ideas which can disrupt the marketplace. We research, design and develop inhouse software products. Always looking out for developing Unikorn Startups.";
+    slider(array, data);
   
      // second section
 
@@ -150,7 +59,7 @@ function myFunction() {
         hTag.style.padding = "50px 100px 40px 20px";
         hTag.style.margin = "0px";
         hTag.style.textAlign = "justify";
-        hTag.innerHTML = "<b>AI THINKERS <br><br></b> We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. </br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.";
+        hTag.innerHTML = "<b>AI THINKERS </b> <br><br> We are helping large enterprises and startup organizations implement data science solutions using proven latest technologies. Our team has domain knowledge and technical skills to architect and deliver end to end product development and develop predictive models and provide data-driven business advice. </br>We also help our enterprise clients and establised companies untangle complex issues that always emerge during their digital evolution journey by providing cutting edge engineering solutions. Our IT strategy consulting will help to choose the right technologies for the business and industry, map out the implementation strategy, as well as help to implement them.<br>We are also looking out to partner with startups which have disrupting ideas and are in the cuttingedge technology space.";
         hTag.classList = "fontSize";
 
         var pTagsecond = document.createElement("p");
@@ -169,182 +78,27 @@ function myFunction() {
 
    document.body.appendChild(aboutUs);
 
-  // third section
-  
-   var portfolioDiv = document.createElement("DIV");
-   portfolioDiv.id = "portfolio";
-   portfolioDiv.style.height = "auto";
-   portfolioDiv.style.width = "100%";
-   portfolioDiv.style.backgroundColor = "#fff4f4";
-   portfolioDiv.style.justifyContent = "space-between";
-   portfolioDiv.textAlign = "center";
-   portfolioDiv.style.padding = "20px 0";
-   //portfolioDiv.style.paddingRight = "10px";
-
-   //===== Portfolio heading ========
-   var thirdfirstheading = document.createElement("h1");
-   thirdfirstheading.innerHTML = "Portfolio";
-   thirdfirstheading.style.margin = "0px";
-   thirdfirstheading.style.padding = "1.5em 0 10px";
-   thirdfirstheading.style.borderBottom = "1px solid gray";
-   thirdfirstheading.style.textAlign = "center";
-   portfolioDiv.appendChild(thirdfirstheading);
-
-   //===============
-   var thirdfirstDiv = document.createElement("DIV");
-   thirdfirstDiv.style.display = "flex";
-   thirdfirstDiv.style.flexWrap = "wrap";
-   thirdfirstDiv.style.padding = "40px 80px";
-   thirdfirstDiv.style.justifyContent = "center";
-
-   portfolioDiv.appendChild(thirdfirstDiv);
-    //======= portfolio
+   // third section
    var portfolio = [{'src':"img/image5.jpg"},
-    {'src':"img/image3.jpg"},
-    {'src':"img/image4.jpg"},
-    {'src':"img/image2.jpg"},
-    {'src':"img/image4.jpg"},
-    {'src':"img/image5.jpg"},
-    {'src':"img/image3.jpg"},
-    {'src':"img/image4.jpg"},
-    {'src':"img/image2.jpg"}];
+        {'src':"img/image3.jpg"},
+        {'src':"img/image4.jpg"},
+        {'src':"img/image2.jpg"},
+        {'src':"img/image4.jpg"},
+        {'src':"img/image5.jpg"},
+        {'src':"img/image3.jpg"},
+        {'src':"img/image4.jpg"}];
 
-    
-    portfolio.forEach(index => {
-        portfoliofun(index)
-    });
-
-    function portfoliofun(index)
-    {
-        var centerDiv = document.createElement("img");	
-        centerDiv.classList = 'responsive';
-        centerDiv.src = index.src;
-        centerDiv.style.width = "22%";
-        centerDiv.style.padding = "2px";
-        centerDiv.style.margin = "8px";
-        centerDiv.style.display = "block";
-        centerDiv.style.border = "1px solid white";
-        centerDiv.style.boxShadow = "black 4px 6px 6px";
-        thirdfirstDiv.appendChild(centerDiv);
-    }
-
-   document.body.appendChild(portfolioDiv);
+   gallery('PORTFOLIO', portfolio);
    
    var ifreamDiv = document.createElement("iframe");
    ifreamDiv.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113579.78745693566!2d77.90997248568897!3d27.176157105939453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1639540446882!5m2!1sen!2sin";
-   ifreamDiv.style.height = "500px";
+   ifreamDiv.style.height = "550px";
    ifreamDiv.style.width = "100%";
    document.body.appendChild(ifreamDiv);
    
-   var footerDiv = document.createElement("DIV");
-   footerDiv.id = "contactus";
-   footerDiv.style.height = "auto";
-   footerDiv.style.width = "100%";
-   footerDiv.style.backgroundColor = "#212121";
-   footerDiv.style.padding = "20px 0";
-   footerDiv.style.display = "flex";
-   footerDiv.style.justifyContent = "center";
-   footerDiv.style.alignItems = "center";
-   
-   var divContainer = document.createElement("div");
-   divContainer.style.width= "100%";
-   divContainer.style.display = "flex";
-   divContainer.style.flexWrap = "wrap";
-   divContainer.style.justifyContent = "space-between";
-   divContainer.style.alignItems = "center";
-   divContainer.style.paddingLeft = "100px";
-   divContainer.style.paddingRight = "100px";
-   divContainer.style.color = "white";
+   footer();
 
-   var footerFirstDiv = document.createElement("div");
-   footerFirstDiv.innerHTML = "© Copyright Portfolio. All Rights Reserved";
-   footerFirstDiv.style.width = "50%";
-   footerFirstDiv.style.height = "auto";
-   footerFirstDiv.style.fontSize = "20px";
-   footerFirstDiv.style.padding = "20px 0";
-   
-   var footerSecondDiv = document.createElement("div");
-   footerSecondDiv.innerHTML = "Contact Us - &nbsp;&nbsp;<i class='fa fa-phone'></i> 91+7078049692 , &nbsp;&nbsp;<i class='fa fa-envelope-o'></i> rajputumesh117@gmail.com";
-   footerSecondDiv.style.width = "50%";
-   footerSecondDiv.style.fontSize = "20px";
-   footerSecondDiv.style.height = "auto";
-   
-   divContainer.appendChild(footerFirstDiv);
-   divContainer.appendChild(footerSecondDiv);
-   
-   footerDiv.appendChild(divContainer);  
-   
-   document.body.appendChild(footerDiv);
-   
-   if(screen.width<=500)
-   {
-        aboutImg.style.width = '80%';
-
-        abputP.style.width = '80%';
-        abputP.style.padding = '100px';
-        
-        aboutsecondUs.style.display = "block";
-        ifreamDiv.style.height = "800px";
-        var centerDiv = document.getElementsByClassName('responsive');
-        for(var i=0;i<=centerDiv.length;i++)
-        {
-            centerDivfun(i);
-        }
-        function centerDivfun(i)
-        {
-            centerDiv[i].style.width = "45%";
-            centerDiv[i].style.margin = "12px";
-        }
-    var fontSize = document.getElementsByClassName('fontSize');
-        for(var i=0;i<=fontSize.length;i++)
-        {
-            fontSizefun(i);
-        }
-        function fontSizefun(i)
-        {
-            fontSize[i].style.fontSize = "23px";
-            fontSize[i].style.lineHeight = "1.9em";
-        }
-   }else if(screen.width < 1000 && screen.width > 500)
-   {
-        var centerDiv = document.getElementsByClassName('responsive');
-        for(var i=0;i<=centerDiv.length;i++)
-        {
-            centerDivfun(i);
-        }
-        function centerDivfun(i)
-        {
-            centerDiv[i].style.width = "30%";
-            centerDiv[i].style.margin = "10px";
-        }
-    var fontSize = document.getElementsByClassName('fontSize');
-        for(var i=0;i<=fontSize.length;i++)
-        {
-            fontSizefun(i);
-        }
-        function fontSizefun(i)
-        {
-            fontSize[i].style.fontSize = "20px";
-            fontSize[i].style.lineHeight = "1.6em";
-        }
-   }else {
-        hTag.appendChild(pTagsecond);
-        //aboutsecondUs.appendChild(pTagsecond);
-   }
-
-    var array = ['img/At-AiThinkers.jpg','img/alige.jpg', 'img/start-up.jpg','img/INTELLIGENT.jpg'];
-    var i=0;
-    sliderbackground();
-    function sliderbackground() {
-        document.getElementById('bgslider').style.backgroundImage = "url("+array[i]+")";
-        setTimeout(function() {sliderbackground()}, 3000);
-        i++;
-        if(array.length==i)
-        {
-            i=0;
-        }
-    }
-   
+   resonsive();
 }
 
 </script>

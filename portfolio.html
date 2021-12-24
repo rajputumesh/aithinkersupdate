@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AI Thinkers</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://aithinkers.com/assets/img/favicon.png" rel="icon">
+        <link href="https://aithinkers.com/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+        <script src="slider.js"></script>
+        <script src="gallery.js"></script>
+    </head>
+    <body onload="myFunction()" style="padding: 0px;margin: 0;font-family:Montserrat">
+
+        <script>
+            function myFunction() {
+                header();
+
+                var live = [{'src':"img/alige.jpg"},
+                {'src':"img/At-AiThinkers.jpg"},
+                {'src':"img/INTELLIGENT.jpg"}];
+
+                gallery('Our Live Projects', live);
+
+                var demo = [{'src':"img/1.jpg"},
+                            {'src':"img/2.jpg"},
+                            {'src':"img/3.jpg"},
+                            {'src':"img/4.jpg"},
+                            {'src':"img/image4.jpg"},
+                            {'src':"img/image2.jpg"},
+                            {'src':"img/5.jpg"},
+                            {'src':"img/6.jpg"}];
+                gallery('Our Demo Projects', demo);
+
+                footer();
+            }
+        </script>
+
+    </body>
+</html>
