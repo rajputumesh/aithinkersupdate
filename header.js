@@ -43,7 +43,7 @@ function header()
     var menutab = [{'name':"Home",'value':"index.html"},
     {'name':"About Us",'value':"about.html"},
     {'name':"Portfolio",'value':"portfolio.html"},
-    {'name':"Contact US",'value':"index#contactus"}];
+    {'name':"Contact US",'value':"index.html#contactus"}];
 
     menutab.forEach(index => {
         manu(index);
